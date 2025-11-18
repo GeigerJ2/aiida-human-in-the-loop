@@ -1,0 +1,36 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "aiida-human-in-the-loop"
+version = "0.1.0"
+description = "Example AiiDA workflow that waits for human feedback before continuing"
+readme = "README.md"
+license = { text = "MIT" }
+authors = [
+    { name = "Giovanni Pizzi", email = "giovanni.pizzi@psi.ch" },
+    { name = "AiiDA Team", email = "developers@aiida.net" }
+]
+keywords = ["aiida", "workflows", "human-in-the-loop", "interactive"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Framework :: AiiDA",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Scientific/Engineering",
+]
+requires-python = ">=3.9"
+dependencies = ["aiida-core>=2.5"]
+
+[project.urls]
+Repository = "https://github.com/GeigerJ2/aiida-human-in-the-loop"
+Documentation = "https://github.com/GeigerJ2/aiida-human-in-the-loop#readme"
+
+[project.entry-points.'aiida.workflows']
+"humanintheloop.humanloop" = "aiida_humanintheloop:HumanLoopWorkChain"
