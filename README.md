@@ -29,8 +29,11 @@ pip install -e .
 
 ```python
 from aiida_humanintheloop import HumanLoopWorkChain
+from aiida import load_profile
 from aiida.orm import Int
 from aiida.engine import submit
+
+load_profile()
 
 # Submit the workflow
 node = submit(HumanLoopWorkChain, max_iters=Int(10))
@@ -42,8 +45,11 @@ print(f"Submitted workflow with PK={node.pk}")
 The workflow pauses and stores questions in the node's extras. To interact:
 
 ```python
+from aiida import load_profile
 from aiida.orm import load_node
 from aiida.engine.processes import control
+
+load_profile()
 
 # Load the paused workflow
 wf = load_node(PK)  # Replace PK with your workflow's PK
