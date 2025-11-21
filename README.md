@@ -2,6 +2,8 @@
 
 An AiiDA plugin demonstrating human-in-the-loop workflows that pause and wait for user input before continuing execution.
 
+This is the accompanying package to the [blog post](https://aiida.net/news/posts/2025-11-21-human-in-the-loop.html) about bringing the "human back in the loop", published on [`aiida.net`](https://aiida.net).
+
 ## Overview
 
 This plugin provides a `HumanLoopWorkChain` that implements a simple number-guessing game to demonstrate how AiiDA workflows can pause execution, request human input, and resume based on that input.
