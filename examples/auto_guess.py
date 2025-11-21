@@ -1,10 +1,13 @@
 from aiida.orm import load_node
+from aiida import load_profile
 import sys
 import time
 from aiida.engine.processes import control
 
 if __name__ == "__main__":
     wf = load_node(int(sys.argv[1]))
+
+    load_profile()
 
     while not wf.is_finished:
         while not wf.is_finished and not wf.paused:
